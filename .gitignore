@@ -22,6 +22,11 @@ Wiki
 Security
 Insights
 
+**/*.jpg
+!/public/assets/images/*.jpg
+
+**/pcs
+
     Settings
 
 civiz/.gitignore
