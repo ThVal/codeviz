@@ -11,7 +11,7 @@ from wordcloud import WordCloud, ImageColorGenerator
 import base64
 
 
-mask = np.array(Image.open("bonnet.jpg"))
+mask = np.array(Image.open("pics/bonnet.jpg"))
 image_colors = ImageColorGenerator(mask)
 
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']

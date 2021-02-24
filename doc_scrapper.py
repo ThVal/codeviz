@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-file = open('ddhc.txt', 'r')
+file = open('data/ddhc.txt', 'r')
 stop_words_file= open('stop_words_french.txt', 'r')
 
 stop_words = ' '.join(line for line in stop_words_file.read().splitlines()).lower()
