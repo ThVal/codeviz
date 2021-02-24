@@ -45,6 +45,7 @@ def plot_wordcloud(data):
     return wc.to_image()
 
 @app.callback(dd.Output('image_wc', 'src'), [dd.Input('image_wc', 'id')])
+
 def make_image(b):
     img = BytesIO()
     plot_wordcloud(data=freqs).save(img, format='PNG')
