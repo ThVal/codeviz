@@ -1,15 +1,21 @@
 import re
+from sandbox import file
 
-# open data
-file = open('data/ddhc.txt', 'r')
+
+""" 
+
+parse .txt in /data
+-> word frequence 
+"""
+
 
 # clean file.txt
-content = ' '.join(line for line in file.read().splitlines()).lower().replace("'"," ").replace(","," ")
-content = re.sub("[0-9.,°€—'%)-]",'', content)
+content = ' '.join(line for line in file.read().splitlines()).lower().replace("'", " ").replace(",", " ")
+content = re.sub("[0-9.,°€—'%)-]", '', content)
 content = content.split(' ')
 
-#open stop_word file
-stop_words_file= open('stop_words_french.txt', 'r')
+# open stop_word file
+stop_words_file = open('stop_words_french.txt', 'r')
 # load stopwoard from stopwords.txt
 stop_words = ' '.join(line for line in stop_words_file.read().splitlines()).lower()
 
@@ -26,5 +32,3 @@ for word in content:
             freqs[word] += 1
 
 file.close()
-
-
