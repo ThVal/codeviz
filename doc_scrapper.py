@@ -1,7 +1,7 @@
 import re
 
 # open data
-file = open('data/ddhc.txt', 'r')
+file = open('data/cgi.txt', 'r')
 
 # clean file.txt
 content = ' '.join(line for line in file.read().splitlines()).lower().replace("'"," ").replace(","," ")
@@ -10,7 +10,8 @@ content = content.split(' ')
 
 #open stop_word file
 stop_words_file= open('stop_words_french.txt', 'r')
-# load stopwoard from stopwords.txt
+
+# transform stopword for data processing
 stop_words = ' '.join(line for line in stop_words_file.read().splitlines()).lower()
 
 # dict of word : frequency
