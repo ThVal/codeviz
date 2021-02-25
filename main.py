@@ -11,7 +11,7 @@ from wordcloud import WordCloud, ImageColorGenerator
 import base64
 
 
-mask = np.array(Image.open("pics/bonnet.jpg"))
+mask = np.array(Image.open("pics/fp.jpg"))
 image_colors = ImageColorGenerator(mask)
 
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -24,20 +24,19 @@ app.layout = html.Div([
 ])
 
 #/usr/share/fonts/truetype/msttcorefonts/times.ttf
-#/home/t/.local/share/fonts/FeFCrm27C.otf"
+#/home/t/.local/share/fonts/FeFCrm27C.otf
 #/home/t/Téléchargements/oldnewspapertypes/OldNewspaperTypes.ttf
 
 def plot_wordcloud(data):
     d = data
     wc = WordCloud(background_color='white',
-                   font_path="/usr/share/fonts/truetype/msttcorefonts/times.ttf",
+                   font_path="/home/t/.local/share/fonts/FeFCrm27C.otf",
                    max_words = 2000,
                    mask=mask,
                    width=1024,
                    height=1024,
-                   max_font_size=60,
-                   min_font_size=5,
-                   mode='RGBA'
+                   max_font_size=90,
+                   min_font_size=1
                    )
     wc.fit_words(d)
     wc.recolor(color_func=image_colors)
