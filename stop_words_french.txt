@@ -494,8 +494,6 @@ voie
 voient
 état
 étions
-code
-civil
 dernière
 modification
 janvier
@@ -529,13 +527,9 @@ iii
 "
 citoyen
 alinéa
-commerce
-travail
 soussection
-environnement
 cgi
 impôts
-général
 mentionnés
 mentionné
 mentionnées
@@ -547,7 +541,6 @@ prévue
 prévu
 prévus
 peines
-pénal
 infractions
 punis
 commis
@@ -555,3 +548,4 @@ bis
 ter
 quater
 taxes
+sociétés
