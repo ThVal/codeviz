@@ -2,20 +2,15 @@ import dash
 import dash.dependencies as dd
 import dash_core_components as dcc
 import dash_html_components as html
-from doc_scrapper import freqs
-import numpy as np
-from PIL import Image
+from parser import freqs
+from sandbox import mask
 from io import BytesIO
 
 from wordcloud import WordCloud, ImageColorGenerator
 import base64
 
-
-mask = np.array(Image.open("pics/bonnet.jpg"))
-image_colors = ImageColorGenerator(mask)
-
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
+image_colors = ImageColorGenerator(mask)
 app = dash.Dash(__name__) #, external_stylesheets=external_stylesheets)
 
 
@@ -35,7 +30,7 @@ def plot_wordcloud(data):
                    mask=mask,
                    width=1024,
                    height=1024,
-                   max_font_size=60,
+                   max_font_size=90,
                    min_font_size=5,
                    mode='RGBA'
                    )

@@ -4,7 +4,7 @@ import numpy as np
 """
 
 Tweak the word cloud by 
-changindg the .txt and/or the pic
+changing the .txt and/or the pic
 
 """
 
