@@ -1,7 +1,7 @@
 import re
 
 # open data
-file = open('data/cgi.txt', 'r')
+file = open('data/constitution.txt', 'r')
 
 # clean file.txt
 content = ' '.join(line for line in file.read().splitlines()).lower().replace("'"," ").replace(","," ")

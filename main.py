@@ -11,12 +11,12 @@ from wordcloud import WordCloud, ImageColorGenerator
 import base64
 
 
-mask = np.array(Image.open("pics/fp.jpg"))
+mask = np.array(Image.open("pics/roundel2.jpg"))
 image_colors = ImageColorGenerator(mask)
 
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__) #, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__)
 
 
 app.layout = html.Div([
@@ -30,12 +30,12 @@ app.layout = html.Div([
 def plot_wordcloud(data):
     d = data
     wc = WordCloud(background_color='white',
-                   font_path="/home/t/.local/share/fonts/FeFCrm27C.otf",
-                   max_words = 2000,
+                   font_path="/usr/share/fonts/truetype/msttcorefonts/times.ttf",
+                   max_words = 1000,
                    mask=mask,
                    width=1024,
                    height=1024,
-                   max_font_size=90,
+                   max_font_size=70,
                    min_font_size=1
                    )
     wc.fit_words(d)

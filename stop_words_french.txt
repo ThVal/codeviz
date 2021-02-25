@@ -528,10 +528,8 @@ iii
 citoyen
 alinéa
 soussection
-environnement
 cgi
 impôts
-général
 mentionnés
 mentionné
 mentionnées
@@ -543,7 +541,6 @@ prévue
 prévu
 prévus
 peines
-pénal
 infractions
 punis
 commis
